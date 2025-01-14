@@ -6,8 +6,8 @@ import IconButton from "@mui/material/IconButton";
 export default function Navbar() {
   return (
     <nav className="fixed w-full bg-white shadow z-10">
-      <div className="px-48 py-5 flex justify-between items-center">
-        <div className="logo hidden lg:flex">
+      <div className="px-48 py-5 flex flex-col lg:flex-row justify-between items-center">
+        <div className="logo lg:flex">
           <Link to="/" className="font-bold text-2xl">
             <p>
               COLO<span className="text-red-600">SHOP</span>
@@ -23,10 +23,6 @@ export default function Navbar() {
               <NavLink to="add">Add</NavLink>
             </li>
             <li>Shop</li>
-            <li>Promotion</li>
-            <li>Pages</li>
-            <li>Blog</li>
-            <li>Contact</li>
           </ul>
           <div className="basket">
             <Link to="basket">
