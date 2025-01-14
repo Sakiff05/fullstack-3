@@ -28,7 +28,7 @@ export default function ShopCard({ item, onDelete }) {
           Delete
         </button>
       </div>
-      
+
       <div className="imgWrapper">
         <img src={`${item.image}`} alt="" className="w-full bg-cover" />
       </div>
@@ -38,7 +38,7 @@ export default function ShopCard({ item, onDelete }) {
       </div>
       <button
         onClick={handleAddBasket}
-        className="w-full bg-rose-600 text-white uppercase font-bold py-2 hidden group-hover:flex items-center justify-center"
+        className="w-full bg-rose-600 text-white uppercase font-bold py-2 invisible group-hover:visible items-center justify-center"
       >
         Add to cart
       </button>

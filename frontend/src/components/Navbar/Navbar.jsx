@@ -2,8 +2,10 @@ import React from "react";
 import { Link, NavLink } from "react-router";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import IconButton from "@mui/material/IconButton";
+import { useSelector } from "react-redux";
 
 export default function Navbar() {
+  const basket = useSelector((state) => state.basket.basket);
   return (
     <nav className="fixed w-full bg-white shadow z-10">
       <div className="px-48 py-5 flex flex-col lg:flex-row justify-between items-center">
@@ -27,7 +29,8 @@ export default function Navbar() {
           <div className="basket">
             <Link to="basket">
               <IconButton>
-                <ShoppingBasketIcon fontSize="large" sx={{ color: "black" }} />
+                <ShoppingBasketIcon fontSize="large" sx={{ color: "black" }} />(
+                {basket.reduce((acc, sum) => acc + sum.count, 0)})
               </IconButton>
             </Link>
           </div>
