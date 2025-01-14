@@ -1,0 +1,13 @@
+.header {
+  position: relative;
+}
+.header::after {
+  content: "";
+  width: 100px;
+  height: 5px;
+  background-color: red;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
